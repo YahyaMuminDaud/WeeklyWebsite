@@ -1,0 +1,96 @@
+.wrap {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.phone {
+  width: 200px;
+  height: 380px;
+  background: var(--ink);
+  border-radius: 32px;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1.5rem;
+}
+
+.phone::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  width: 60px;
+  height: 5px;
+  background: #333;
+  border-radius: 3px;
+}
+
+.weekLabel {
+  font-size: 0.45rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.task {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1rem;
+  color: var(--paper);
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  transition: opacity 0.3s;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px solid #333;
+  color: #666;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor: crosshair;
+  transition: all 0.3s;
+  border-radius: 4px;
+}
+
+.btnActive {
+  border-color: var(--ember);
+  color: var(--ember);
+  box-shadow: 0 0 20px rgba(217,79,0,0.15);
+}
+
+.flame {
+  margin-top: 1.5rem;
+  font-size: 1.8rem;
+  animation: flicker 2s ease-in-out infinite;
+  transition: all 0.4s;
+}
+
+.flameBig {
+  font-size: 2.2rem;
+  filter: drop-shadow(0 0 12px rgba(217,79,0,0.7));
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(0.96); }
+}
+
+.streak {
+  font-size: 0.45rem;
+  color: var(--ember-dim);
+  letter-spacing: 0.1em;
+  margin-top: 0.4rem;
+}
